@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: url(background.jpg) no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Added padding for better spacing on small screens */
+}
+
+.main {
+    width: 100%;
+    max-width: 1200px; /* Maximum width to keep content readable on large screens */
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: rgba(255, 255, 255, 0.945) 0px 3px 8px;
+    overflow: hidden; /* Prevent overflow on small screens */
+}
+
+.box1, .box2 {
+    width: 50%;
+    padding: 20px; /* Added padding inside boxes */
+}
+
+.box1 {
+    background-color: #5C5470;
+}
+
+.box1 h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #352F44;
+    background: transparent;
+    outline: none;
+    color: white;
+    padding: 10px;
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical; /* Allow vertical resizing */
+}
+
+input::placeholder, textarea::placeholder {
+    color: aliceblue;
+}
+
+button {
+    padding: 15px;
+    border: none;
+    outline: none;
+    background-color: #B9B4C7;
+    margin: 20px 0;
+    border-radius: 5px;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+button:hover {
+    cursor: pointer;
+    color: #3DFFFF;
+    background-color: #352F44;
+}
+
+.box2 {
+    background-color: #352F44;
+}
+
+.box2 h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.box2 p {
+    color: #bbbbbb;
+}
+
+.inbox2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    width: 100%;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.content h3 {
+    font-size: 18px;
+    font-weight: lighter;
+    margin: 0;
+}
+
+.top i {
+    font-size: 28px;
+    margin-right: 10px;
+}
+
+.top {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1024px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .box1, .box2 {
+        width: 100%;
+        border-radius: 15px;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .container {
+        padding: 10px; /* Reduced padding on very small screens */
+    }
+
+    .box1, .box2 {
+        padding: 10px; /* Reduced padding inside boxes */
+    }
+
+    .content {
+        font-size: 16px; /* Smaller font size on small screens */
+    }
+
+    input[type="text"], input[type="email"], textarea {
+        font-size: 14px;
+    }
+}
